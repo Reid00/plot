@@ -47,10 +47,11 @@ def static_paint():
         ax.set_ylabel('')
         # 将0处设为空字符串，其他地方加上k
         ax.set_yticklabels(['','5k','10k','15k','20k','35k','30k','35k'])
+        ax.axis([1,10,0,40])  # [xmin,xmax,ymin,ymax]  设置x，y坐标轴的大小长度
         # x轴标签更改
         plt.xticks(rotation='45', color='red',fontsize=10)
         plt.subplots_adjust(bottom=0.2)  #因为竖着字太长，生成图片中的x轴标签会被截取。因此设置距离底部0.2
-        # plt.show()
+        plt.show()
         
 
 if __name__ == "__main__":
